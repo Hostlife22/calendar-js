@@ -1,0 +1,104 @@
+.create-event {
+    width: 413px;
+    height: 360px;
+    position: relative;
+
+    &__close-btn {
+        transform: rotate(45deg);
+        font-size: 27px;
+        background-color: transparent;
+        position: absolute;
+        right: 4px;
+        top: -6px;
+        cursor: pointer;
+        outline: none;
+    }
+}
+.event-form {
+    display: flex;
+    flex-direction: column;
+
+    input[type="text"] {
+        margin-top: 26px;
+        margin-left: 51px;
+        border-bottom: 1px solid #1a73e8;
+        line-height: 26px;
+        margin-bottom: 74px;
+    }
+
+    input[type="date"] {
+        margin-left: 46px;
+    }
+
+    textarea[name="description"] {
+        margin-top: 46px;
+        margin-left: 46px;
+    }
+
+    &__submit-btn {
+        background-color: #1a73e8;
+        position: absolute;
+        bottom: -7px;
+        right: -3px;
+        width: 123px;
+        height: 36px;
+        color: #ffffff;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &__select-color {
+        display: flex;
+        align-items: center;
+        width: 44px;
+        height: 36px;
+        border-radius: 3px;
+        justify-content: space-around;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        &:hover {
+            background-color: rgba(32, 33, 36, 0.039);
+            transition: background-color 0.3s;
+        }
+    }
+
+    &__colors {
+        position: absolute;
+        top: 8px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 64px;
+        height: 160px;
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%),
+            0px 5px 5px -3px rgb(0 0 0 / 20%);
+    }
+    &__colors_hidden {
+        display: none;
+    }
+    &__color {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__selected {
+        width: 18px;
+        height: 18px;
+        background-color: #1a73e8;
+        border-radius: 50%;
+    }
+
+    &__triangle-icon {
+    }
+}

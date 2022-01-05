@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calendar</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+		integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+		integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page">
+	<header class="header">
+		<button class="button create-event-btn">
+			<svg width="30" height="30" viewBox="0 0 36 36">
+				<path fill="#34A853" d="M16 16v14h4V20z"></path>
+				<path fill="#4285F4" d="M30 16H20l-4 4h14z"></path>
+				<path fill="#FBBC05" d="M6 16v4h10l4-4z"></path>
+				<path fill="#EA4335" d="M20 16V6h-4v14z"></path>
+				<path fill="none" d="M0 0h36v36H0z"></path>
+			</svg>Create</button>
+
+		<div class="navigation">
+			<button data-direction="today" class="navigation__today-btn button">Today</button>
+			<button data-direction="prev" class="icon-button navigation__nav-icon">
+				<i class="fas fa-chevron-left"></i>
+			</button>
+			<button data-direction="next" class="icon-button navigation__nav-icon">
+				<i class="fas fa-chevron-right"></i>
+			</button>
+			<span class="navigation__displayed-month"></span>
+		</div>
+	</header>
+	<section class="calendar">
+		<header class="calendar__header"></header>
+		<div class="calendar__body">
+			<div class="calendar__week-container">
+				<div class="calendar__time-scale"></div>
+				<div class="calendar__week"></div>
+			</div>
+		</div>
+	</section>
+	<div class="modal hidden overlay">
+		<div class="modal__content">
+			<div class="create-event">
+				<button class="create-event__close-btn">+</button>
+				<form class="event-form">
+					<input type="text" name="title" placeholder="Title" class="event-form__field" />
+					<div class="event-form__time">
+						<input type="date" name="date" class="event-form__field" />
+						<input type="time" step="900" min="00:00" max="23:30" name="startTime"
+							class="event-form__field" />
+						<span>-</span>
+						<input type="time" step="900" min="00:00" max="23:45" name="endTime"
+							class="event-form__field" />
+					</div>
+					<div class="error"></div>
+					<textarea name="description" placeholder="Description" class="event-form__field"></textarea>
+					<div class="event-form__select-color">
+						<div class="event-form__selected" data-event-color="#039be5"></div>
+						<span class="event-form__triangle-icon"><i class="fas fa-caret-down"></i></span>
+						<div class="event-form__colors event-form__colors_hidden">
+						</div>
+					</div>
+					<button type="submit" class="event-form__submit-btn">Create</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup hidden overlay">
+		<div class="popup__overlay"></div>
+		<div class="popup__content">
+			<div class="popup__buttons">
+				<button class="popup__btn update-event-btn"><i class="fas fa-pen"></i></button>
+				<button class="popup__btn delete-event-btn"><i class="fas fa-trash"></i></button>
+				<button class="popup__btn close-event-btn"><i class="fas fa-times"></i></button>
+			</div>
+			<div class="popup__description"></div>
+
+		</div>
+	</div>
+	</div>
+	<script src="scripts/index.js" type="module"></script>
+</body>
+
+</html>

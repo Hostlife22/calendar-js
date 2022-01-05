@@ -1,0 +1,12 @@
+.calendar__time-scale {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+
+    &-hour {
+        flex: 1 1 60px;
+        font-size: 10px;
+        margin-right: 17px;
+        cursor: pointer;
+    }
+}

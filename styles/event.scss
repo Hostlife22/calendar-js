@@ -1,0 +1,24 @@
+.calendar__event {
+    padding: 5px;
+    background-color: #1a73e8;
+    position: absolute;
+    width: 85%;
+    z-index: 2;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+
+    p {
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.error {
+    color: #ff0000;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+}
