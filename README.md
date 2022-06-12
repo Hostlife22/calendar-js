@@ -2,6 +2,10 @@
 
 ### [Site link](https://hostlife22.github.io/calendar-js/)
 
+<kbd>
+  <img align="right" alt="img" src="qhOSoxt.jpeg"  />
+ </kbd>
+
 ### The tech stack is:
 
 - [JavaScript](https://ru.wikipedia.org/wiki/JavaScript)
